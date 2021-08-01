@@ -327,9 +327,9 @@ ul li a:hover{text-decoration:none;}
 	<?php
 	   $food_id=$arr[0];
 	  $query=mysqli_query($con,"select tblvendor.fld_email,tblvendor.fld_name,tblvendor.fld_mob,
-	  tblvendor.fld_phone,tblvendor.fld_address,tblvendor.fldvendor_id,tblvendor.fld_logo,tbfood.food_id,tbfood.foodname,tbfood.cost,
+	  tblvendor.fld_gender,tblvendor.fld_address,tblvendor.fldvendor_id,tblvendor.fld_logo,tbfood.food_id,tbfood.foodname,tbfood.cost,
 	  tbfood.cuisines,tbfood.paymentmode,tbfood.fldimage from tblvendor inner join
-	  tbfood on tblvendor.fldvendor_id=tbfood.fldvendor_id where tbfood.food_id='$food_id'");
+	  tbfood on tblvendor.fldvendor_id=tbfood.fldvendor_id where tbfood.food_id='2'");
 	  while($res=mysqli_fetch_assoc($query))
 	  {
 		   $hotel_logo= "image/restaurant/".$res['fld_email']."/".$res['fld_logo'];
@@ -403,7 +403,7 @@ ul li a:hover{text-decoration:none;}
 	                  <?php
 	                        $food_id=$arr[1];
 	                        $query=mysqli_query($con,"select tblvendor.fld_email,tblvendor.fld_name,tblvendor.fld_mob,
-	                        tblvendor.fld_phone,tblvendor.fld_address,tblvendor.fld_logo,tbfood.food_id,tbfood.foodname,tbfood.cost,
+	                        tblvendor.fld_gender,tblvendor.fld_address,tblvendor.fld_logo,tbfood.food_id,tbfood.foodname,tbfood.cost,
 	                        tbfood.cuisines,tbfood.paymentmode,tbfood.fldimage from tblvendor inner join
 	                        tbfood on tblvendor.fldvendor_id=tbfood.fldvendor_id where tbfood.food_id='$food_id'");
 	                             while($res=mysqli_fetch_assoc($query))
